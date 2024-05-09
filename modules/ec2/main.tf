@@ -38,7 +38,7 @@ resource "aws_security_group" "main" {
 resource "aws_instance" "ec2_example" {
   ami           = var.ami
   instance_type = var.instance_type
-  user_data     = locals.user_data
+  user_data     = local.user_data
 
   root_block_device {
     encrypted = true
